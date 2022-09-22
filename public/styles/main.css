@@ -1,76 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-
-:root {
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-}
-
 body {
-    background-color: rgb(248, 244, 244);
-  font-family: "Open Sans", sans-serif;
-}
-
-p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
-img {
-  width: 100%;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+    background-color: #fff;
+  font-family: sans-serif;
 }
 .header{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
+    background-color: #FFF3F3;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+ 
 .buttons{
-    padding-left: 600px;
-    padding-bottom: 20px;
-    margin-top: 15px;
+    padding-left: 1300px;
+    padding-top: 25px;
 }
 .buttons #home{
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 5px;
     background: none;
+    font-family: sans-serif;
 
 }
 .buttons #products{
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 5px;
     background: none;
-
+    font-family: sans-serif;
 
 }
 .buttons #checkout{
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 5px;
     background: none;
+    font-family: sans-serif;
 
+}
+#pic1{
+    position: absolute;
+    left: 870px;
+    top: 150px;
+    height: 493px;
+    width: 530px;
 
+}
+.in-image{
+    position: absolute;
+    top: 230px;
+    left: 170px;
+}
+#text1{
+    font-size: 24px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+#text2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+#btnProducts{
+    Border-radius: 5px;
+    background-color: #db6400;
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+.footer{
+  background-color: #FFF3F3;
+  position: fixed;
+  height: 80px;
+  bottom: 0;
+  width: 100%;
 }
