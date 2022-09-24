@@ -2,7 +2,7 @@ body {
     background-color: #fff;
   font-family: sans-serif;
 }
-.header{
+header{
     background-color: #FFF3F3;
     height: 80px;
     position: fixed;
@@ -10,11 +10,12 @@ body {
     width: 100%;
   }
  
-.buttons{
+nav{
     padding-left: 1300px;
     padding-top: 25px;
+    
 }
-.buttons #home{
+nav #home{
     border: none;
     font-size: 15px;
     margin-left: 5px;
@@ -22,7 +23,7 @@ body {
     font-family: sans-serif;
 
 }
-.buttons #products{
+nav #products{
     border: none;
     font-size: 15px;
     margin-left: 5px;
@@ -30,7 +31,7 @@ body {
     font-family: sans-serif;
 
 }
-.buttons #checkout{
+nav #checkout{
     border: none;
     font-size: 15px;
     margin-left: 5px;
@@ -46,7 +47,7 @@ body {
     width: 530px;
 
 }
-.in-image{
+section{
     position: absolute;
     top: 230px;
     left: 170px;
@@ -69,7 +70,7 @@ body {
     border: none;
     padding: 10px;
 }
-.footer{
+footer{
   background-color: #FFF3F3;
   position: fixed;
   height: 80px;
