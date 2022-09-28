@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
 body {
     background-color: #fff;
   font-family: sans-serif;
@@ -5,39 +11,20 @@ body {
 header{
     background-color: #FFF3F3;
     height: 80px;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
   }
- 
-nav{
-    padding-left: 1300px;
-    padding-top: 25px;
-    
+a{
+    text-decoration: none;
+    margin-right: 5px;
 }
-nav #home{
-    border: none;
-    font-size: 15px;
-    margin-left: 5px;
-    background: none;
-    font-family: sans-serif;
-
+a:link{
+    color: inherit;
 }
-nav #products{
-    border: none;
-    font-size: 15px;
-    margin-left: 5px;
-    background: none;
-    font-family: sans-serif;
-
-}
-nav #checkout{
-    border: none;
-    font-size: 15px;
-    margin-left: 5px;
-    background: none;
-    font-family: sans-serif;
-
+a:visited{
+    color: inherit;
 }
 #pic1{
     position: absolute;
@@ -70,10 +57,7 @@ section{
     border: none;
     padding: 10px;
 }
-footer{
-  background-color: #FFF3F3;
-  position: fixed;
-  height: 80px;
-  bottom: 0;
-  width: 100%;
-}
+/* footer{
+    background-color: #FFF3F3;
+    height: 100px;
+} */
