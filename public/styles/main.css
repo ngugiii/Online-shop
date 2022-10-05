@@ -1,111 +1,200 @@
-*{
-    padding: 0;
-    margin: 0;
-    /* border: 1px solid red; */
-    
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
-    background-color: #fff;
+  background-color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+header {
+  background-color: #fff3f3;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+a:link {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
+section#hero {
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 100px;
+}
+
+#hero #text1 {
+  font-size: 24px;
+  font-weight: 500;
   font-family: sans-serif;
 }
-header{
-    background-color: #FFF3F3;
-    height: 80px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+#hero #text2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+#hero #btnProducts {
+  border-radius: 5px;
+  background-color: #db6400;
+  color: #fff;
+  border: none;
+  padding: 10px;
+}
+#hero #pic1 {
+  height: 400px;
+  width: 470px;
+}
+footer {
+  background-color: #fff3f3;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download {
+  font-size: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 180px;
+}
+.download #playstore {
+  margin-top: 8px;
+  height: 40px;
+  width: 130px;
+  margin-bottom: 10px;
+}
+.download #appstore {
+  margin-top: 8px;
+  height: 40px;
+  width: 130px;
+  margin-bottom: 10px;
+}
+.purpose {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 200px;
+}
+.purpose h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.purpose h2 {
+  font-weight: 500;
+}
+.follow {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.follow h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.social {
+  height: 35px;
+  width: 35px;
+}
+@media only screen and (max-width: 450px) {
+  header {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  main > section#hero {
+    padding: 0 20px;
+    display: block;
 
   }
-a{
-    text-decoration: none;
-    margin-right: 5px;
-}
-a:link{
-    color: inherit;
-}
-a:visited{
-    color: inherit;
-}
-
-section{
- float: left;
- padding-top: 100px;
- padding-left: 120px;
-}
-
-#text1{
-    font-size: 24px;
-    font-weight: 500;
-    font-family: sans-serif;
-}
-#text2{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    font-family: sans-serif;
-}
-#btnProducts{
-    Border-radius: 5px;
-    background-color: #db6400;
-    color: #fff;
-    border: none;
-    padding: 10px;
-}
-aside{
-    float: right;
-    right: 770px;
-    padding-right: 150px;
-}
-#pic1{
-    height: 493px;
-    width: 530px;
-}
-footer{
-    background-color: #FFF3F3;
+  main h2#text1 {
+    font-size: 1rem;
+  }
+  main h2#text2 {
+    font-size: 1rem;
+  }
+  #hero #pic1 {
+    width: 296px;
+    margin: 20px;
+    height: auto;
+  }
+  footer {
+    height: 300px;
+    display: block;
+  }
+  footer > div {
     height: 100px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.download{
-    font-size: 10px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-right: 180px;
-}
-#playstore{
-    margin-top: 8px;
-    height: 40px;
-    width: 130px;
-    margin-bottom: 10px;
-}
-.purpose{
-    font-size: 10px;
-    padding-top: 10px;
-    padding-left: 50px;
-    padding-right: 200px;
-}
-.purpose h1{
-    text-align: center;
-    margin-bottom: 15px;
-}
-.purpose h2{
+  }
+  footer h1 {
+    font-size: 1.1rem;
     font-weight: 500;
-}
-.follow{
+  }
+  footer h1#downloadOurAppHeader {
+    display: none;
+  }
+  footer h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  footer h3 {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  footer div.download h3 {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+  .download {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin: 10px;
+  }
+  .purpose {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 10px;
+  }
+  .purpose h1 {
+    text-align: left;
+  }
+  .follow {
     font-size: 10px;
-    padding-top: 10px;
     padding-left: 10px;
-}
-.follow h1{
-    text-align: center;
+  }
+  .follow h1 {
+    text-align: left;
     margin-bottom: 10px;
-}
-#social{
-height: 50px;
-width: 35px;
+  }
+  .social {
+    height: 24px;
+    width: 24px;
+  }
 }
