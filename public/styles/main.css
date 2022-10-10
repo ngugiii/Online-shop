@@ -198,3 +198,38 @@ footer {
     width: 24px;
   }
 }
+.featuredProducts{
+  padding-top: 0;
+}
+ul#featuredProducts{
+  list-style :none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+img{
+  height: 150px;
+  width: 200px;
+  margin: 10px;
+}
+.featuredProducts h1{
+  font-size: 30px;
+  text-decoration: underline 3px solid orangered;
+  text-underline-offset: 10px;
+  text-align: center;
+}
+ul#latestProducts{
+  list-style :none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+ul#AllProducts{
+  list-style :none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
