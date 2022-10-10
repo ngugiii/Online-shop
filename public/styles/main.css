@@ -219,6 +219,12 @@ img{
   text-underline-offset: 10px;
   text-align: center;
 }
+.latestProducts h1{
+  font-size: 30px;
+  text-decoration: underline 3px solid orangered;
+  text-underline-offset: 10px;
+  text-align: center;
+}
 ul#latestProducts{
   list-style :none;
   text-align: center;
@@ -232,4 +238,10 @@ ul#AllProducts{
   display: flex;
   justify-content: center;
   margin: 30px;
+}
+.AllProducts h1{
+  font-size: 30px;
+  text-decoration: underline 3px solid orangered;
+  text-underline-offset: 10px;
+  text-align: center;
 }
