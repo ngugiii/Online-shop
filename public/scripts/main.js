@@ -19,9 +19,6 @@ var featuredProducts = [
 function loadFeaturedProducts(listId){
 
     const listContainer=document.getElementById(listId);
-
-    console.log(listContainer);
-
     var innerHTML= "";
 
     for (var index=0; index < featuredProducts.length; index++){
