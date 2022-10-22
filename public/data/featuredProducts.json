@@ -1,0 +1,21 @@
+{
+    "featuredProducts": [
+    {
+        "name": "Adidas Shoes",
+        "picture": "images/nike.jpg"
+    },
+    {
+        "name": "Red Printed T-shirt",
+        "picture": "images/RedT-shirt.jpg"
+    },
+    {
+        "name": "Black Printed T-shirt",
+        "picture": "images/BlackT-shirt.jpg"
+    },
+    {
+        "name": "Grey Track Pants",
+        "picture": "images/Track-Pants.jpg"
+    }
+]
+
+}

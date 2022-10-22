@@ -58,9 +58,21 @@
     </footer>
     <script src="scripts/main.js"></script>
     <script>
-        loadFeaturedProducts("featuredProducts");
-        loadLatestProducts("latestProducts");
-        loadAllProducts("AllProducts");
+      var renderfeaturedProductsCallback = function (featuredProducts){
+        renderfeaturedProducts("featuredProducts",featuredProducts)
+      };
+      var renderlatestProductsCallback = function (latestProducts){
+        renderlatestProducts("latestProducts",latestProducts)
+      };
+      var renderAllProductsCallback = function (AllProducts){
+        renderAllProducts("AllProducts",AllProducts)
+      };
+
+      loadfeaturedProducts(renderfeaturedProductsCallback,);
+      loadlatestProducts(renderlatestProductsCallback,);
+      loadAllProducts(renderAllProductsCallback,);
+
+    </script>
     </script>
   </body>
 </html>

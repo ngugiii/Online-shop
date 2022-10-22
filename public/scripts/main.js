@@ -1,22 +1,36 @@
-var featuredProducts = [
-    {
-        name: "Adidas Shoes",
-        picture: "images/nike.jpg",
-    },
-    {
-        name: "Red Printed T-shirt",
-        picture: "images/RedT-shirt.jpg",
-    },
-    {
-        name: "Black Printed T-shirt",
-        picture: "images/BlackT-shirt.jpg",
-    },
-    {
-        name: "Grey Track Pants",
-        picture: "images/Track-Pants.jpg",
-    },
-];
-function loadFeaturedProducts(listId){
+async function loadfeaturedProducts(featuredProductsCallback) {
+    fetch("/public/data/featuredProducts.json",{headers: { 'content-type': 'application/json'}})
+    .then(function(data){
+        return data.json();
+    })
+    .then(function(data){
+        featuredProductsCallback(data.featuredProducts);
+
+    });
+}
+
+async function loadlatestProducts(latestProductsCallback) {
+
+    fetch("/public/data/latestProducts.json",{headers: { 'content-type': 'application/json'}})
+    .then(function(data){
+        return data.json();
+    })
+    .then(function(data){
+        latestProductsCallback(data.latestProducts);
+
+    });
+}
+async function loadAllProducts(AllProductsCallback) {
+    fetch("/public/data/AllProducts.json",{headers: { 'content-type': 'application/json'}})
+    .then(function(data){
+        return data.json();
+    })
+    .then(function(data){
+        AllProductsCallback(data.AllProducts);
+
+    });
+}
+function renderfeaturedProducts(listId, featuredProducts){
 
     const listContainer=document.getElementById(listId);
     var innerHTML= "";
@@ -32,25 +46,8 @@ function loadFeaturedProducts(listId){
 
     listContainer.innerHTML = innerHTML;
 }
-var latestProducts = [
-    {
-        name: "Black HRX Shoes",
-        picture: "images/hrx-shoes.jpg",
-    },
-    {
-        name: "Puma shoes",
-        picture: "images/puma-shoes.jpg",
-    },
-    {
-        name: "Black Sports Watch",
-        picture: "images/Sports-watch.jpg",
-    },
-    {
-        name: "Black Fossil Watch",
-        picture: "images/Fossil-watch.jpg",
-    },
-];
-function loadLatestProducts(listId){
+
+function renderlatestProducts(listId, latestProducts){
 
     const listContainer=document.getElementById(listId);
 
@@ -69,61 +66,8 @@ function loadLatestProducts(listId){
 
     listContainer.innerHTML = innerHTML;
 }
-var AllProducts = [
-    {
-        name: "Adidas Hoodie",
-        picture: "images/adidas-hoodie.jpg",
-    },
-    {
-        name: "Orange yeezy shoes",
-        picture: "images/Orange-shoes.jpg",
-    },
-    {
-        name: "Smart Watch",
-        picture: "images/exclusive.png",
-    },
-    {
-        name: "Puma shoes",
-        picture: "images/puma-shoes.jpg",
-    },
-    {
-        name: "HRX Socks",
-        picture: "images/HRX-Socks.jpg",
-    },
-    {
-        name: "HRX Black sports shoes",
-        picture: "images/sports-wear.jpg",
-    },
-    {
-        name: "Black Track Pants",
-        picture: "images/Black-trackpants.jpg",
-    },
-    {
-        name: "Adidas Shoes",
-        picture: "images/nike.jpg",
-    },
-    {
-        name: "Red Printed T-shirt",
-        picture: "images/RedT-shirt.jpg",
-    },
-    {
-        name: "Black HRX Shoes",
-        picture: "images/hrx-shoes.jpg",
-    },
-    {
-        name: "Black Sports Watch",
-        picture: "images/Sports-watch.jpg",
-    },
-    {
-        name: "Black Printed T-shirt",
-        picture: "images/BlackT-shirt.jpg",
-    },
-    {
-        name: "Black Fossil Watch",
-        picture: "images/Fossil-watch.jpg",
-    },
-];
-function loadAllProducts(listId){
+
+function renderAllProducts(listId, AllProducts){
 
     const listContainer=document.getElementById(listId);
 

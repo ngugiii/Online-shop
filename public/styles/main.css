@@ -118,7 +118,7 @@ footer {
   height: 35px;
   width: 35px;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 700px) {
   header {
     width: 100%;
     justify-content: center;
@@ -143,6 +143,9 @@ footer {
   footer {
     height: 300px;
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   footer > div {
     height: 100px;
@@ -205,6 +208,7 @@ ul#featuredProducts{
   list-style :none;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 30px;
 }
@@ -229,6 +233,7 @@ ul#latestProducts{
   list-style :none;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 30px;
 }
@@ -236,8 +241,9 @@ ul#AllProducts{
   list-style :none;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 30px;
+  margin: 40px;
 }
 .AllProducts h1{
   font-size: 30px;

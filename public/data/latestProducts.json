@@ -1,0 +1,21 @@
+{
+    "latestProducts" : [
+    {
+        "name": "Black HRX Shoes",
+        "picture": "images/hrx-shoes.jpg"
+    },
+    {
+        "name": "Puma shoes",
+        "picture": "images/puma-shoes.jpg"
+    },
+    {
+        "name": "Black Sports Watch",
+        "picture": "images/Sports-watch.jpg"
+    },
+    {
+        "name": "Black Fossil Watch",
+        "picture": "images/Fossil-watch.jpg"
+    }
+]
+
+}
