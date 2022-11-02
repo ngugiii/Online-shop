@@ -2,19 +2,27 @@
     "featuredProducts": [
     {
         "name": "Adidas Shoes",
-        "picture": "images/nike.jpg"
+        "picture": "images/nike.jpg",
+        "price": 3500
+
     },
     {
         "name": "Red Printed T-shirt",
-        "picture": "images/RedT-shirt.jpg"
+        "picture": "images/RedT-shirt.jpg",
+        "price": 700
+
     },
     {
         "name": "Black Printed T-shirt",
-        "picture": "images/BlackT-shirt.jpg"
+        "picture": "images/BlackT-shirt.jpg",
+        "price": 750
+
     },
     {
         "name": "Grey Track Pants",
-        "picture": "images/Track-Pants.jpg"
+        "picture": "images/Track-Pants.jpg",
+        "price": 1200
+
     }
 ]
 
