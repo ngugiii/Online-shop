@@ -57,7 +57,7 @@ function renderfeaturedProducts(listId, featuredProducts){
     for (var index=0; index < featuredProducts.length; index++){
         const product = featuredProducts[index];
 
-        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><div> Ksh "+product.price +"<div></li>";
+        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><h4> Ksh "+product.price +"<h4></li>";
         innerHTML+=listItem;
     }
 
@@ -77,7 +77,7 @@ function renderlatestProducts(listId, latestProducts){
     for (var index=0; index < latestProducts.length; index++){
         const product = latestProducts[index];
 
-        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><div> Ksh "+product.price +"<div></li>";
+        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><h4> Ksh "+product.price +"<h4></li>";
         innerHTML+=listItem;
     }
 
@@ -97,8 +97,9 @@ function renderAllProducts(listId, AllProducts){
     for (var index=0; index < AllProducts.length; index++){
         const product = AllProducts[index];
 
-        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><div> Ksh "+product.price +"<div></li>";
+        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><h4> Ksh "+product.price +"<h4></li>";
         innerHTML+=listItem;
+
     }
 
     console.log(innerHTML);

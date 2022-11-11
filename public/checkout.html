@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href=".\styles\main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="checkout.html">Checkout</a>
+      </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="Billing">
+                <form action="">
+                    <h1>Billing Address</h1>
+                    <div class="names">
+                <label for="first">First Name</label>
+                <input type="text" id="first" placeholder="Enter your first name"><br>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" placeholder="Enter your Last name"><br>
+            </div>
+            <label for="email">User Name or Email</label>
+                <input type="text" name="" id="email" placeholder="Enter User Name or Valid Email Address"><br>
+                <label for="address">Address</label>
+                <br> <input type="text" name="" id="address" placeholder="1234 Main St"><br>
+                <div class="residence">
+                    <label for="county">County</label>
+                <input type="text" name="" id="county" placeholder="Enter County of residence">
+                <label for="town">Town</label>
+                 <input type="text" name="" id="town" placeholder="Enter Town of residence">
+                </div><br>
+                <div class="payment">
+                <p>payment<br>
+                <input type="radio" name="Credit card" id="credit" value="credit card"><label for="credit">Credit card</label><br>
+                <input type="radio" name="Debit card" id="debit" value="debit card"><label for="debit">Debit card</label><br>
+                <input type="radio" name="Mobile payment" id="mobile" value="Mobile payment"><label for="mobile">Mobile Payment</label><p>
+                <div class="Payment-details">
+                    <div class="mobile-module">
+                        <label for="mobile">Phone Number</label>
+                <br><input type="text" name="" id="mobile" placeholder="0712345678"><br>
+                    </div>
+                    <div class="credit-module">
+                        <label for="cardNo">Card Number</label>
+                <br><input type="text" name="" id="cardNo" placeholder="xxxx xxxxxxx xxxxx"><br>
+                <label for="exp">Expiration Date</label>
+                <br><input type="text" name="" id="exp" placeholder="mm/yy"><br>
+                <label for="cvv">CVV</label>
+                <br><input type="text" name="" id="cardNo" placeholder="4 Digits"><br>
+                <label for="postal">Postal Code</label>
+                <br><input type="text" name="" id="postal"><br>
+                    </div>
+                    <div class="debit-module">
+                        <label for="cardNo">Card Number</label>
+                <br><input type="text" name="" id="cardNo" placeholder="xxxx xxxxxxx xxxxx"><br>
+                <label for="exp">Expiration Date</label>
+                <br><input type="text" name="" id="exp" placeholder="mm/yy"><br>
+                <label for="cvv">CVV</label>
+                <br><input type="text" name="" id="cardNo" placeholder="4 Digits"><br>
+                <label for="postal">Postal Code</label>
+                <br><input type="text" name="" id="postal"><br>
+                    </div>
+                </div>
+            </div>
+                </form>
+            </div> 
+            <div class="cart">
+                <form action="">
+                    <div class="cart-header">
+                    <h1 class="heading">Your cart</h1>
+                    <h4 class="remove">Remove All</h4>
+                </div>
+                    <div class="cart-items">
+                        <div class="cart-image">
+                            <img src="images/nike.jpg">
+                            </div>
+                            <div class="product-details">
+                                <h1 class="product-name">Adidas Sports Shoes</h1>
+                            </div>
+                            <div class="counter">
+                                <div class="btn">+</div>
+                                <div class="count">2</div>
+                                <div class="btn">-</div>
+                            </div>
+                            <div class="prices">
+                                <div class="amount">ksh 3500</div>
+                            </div>
+                        </div>
+                        <div class="cart-items">
+                            <div class="cart-image">
+                                <img src="images/Fossil-watch.jpg">
+                                </div>
+                                <div class="product-details">
+                                    <h1 class="product-name">Black Fossil Watch</h1>
+                                </div>
+                                <div class="counter">
+                                    <div class="btn">+</div>
+                                    <div class="count">2</div>
+                                    <div class="btn">-</div>
+                                </div>
+                                <div class="prices">
+                                    <div class="amount">ksh 2200</div>
+                                </div>
+                            </div>
+                            <div class="cart-items">
+                                <div class="cart-image">
+                                    <img src="images/adidas-hoodie.jpg">
+                                    </div>
+                                    <div class="product-details">
+                                        <h1 class="product-name"> Grey Adidas Hoodie</h1>
+                                    </div>
+                                    <div class="counter">
+                                        <div class="btn">+</div>
+                                        <div class="count">2</div>
+                                        <div class="btn">-</div>
+                                    </div>
+                                    <div class="prices">
+                                        <div class="amount">ksh 2500</div>
+                                    </div>
+                                </div>
+                                <div class="cart-items">
+                                    <div class="cart-image">
+                                        <img src="images/puma-shoes.jpg">
+                                        </div>
+                                        <div class="product-details">
+                                            <h1 class="product-name">Grey Puma Shoes</h1>
+                                        </div>
+                                        <div class="counter">
+                                            <div class="btn">+</div>
+                                            <div class="count">2</div>
+                                            <div class="btn">-</div>
+                                        </div>
+                                        <div class="prices">
+                                            <div class="amount">ksh 5000</div>
+                                        </div>  
+                                        </div>
+                                     <hr>
+                                     <div class="cart-items">
+                                    <div class="checkout">
+                                    <div class="total">
+                                        <div class="subtotal">
+                                            Total
+                                        </div>
+                                    <div class="total-amount">ksh 13200</div>
+                                </div>
+                            </div>
+                        </div>
+                                   
+                    </div>
+                </form>
+            </div>      
+        </section>
+    </main>
+    <footer>
+      <div class="download">
+        <h1 id="downloadOurAppHeader">Download Our App</h1>
+        <h3>Download App for Android and IOS mobile phone</h3>
+        <img src="images\play-store.png" id="playstore" />
+        <img src="images\app-store.png" id="appstore" />
+      </div>
+      <div class="purpose">
+        <h1>ONLINE SHOP</h1>
+        <h2>
+          our purpose is to sustainably make the pleasure and<br />
+          benefits of sports accessible to many
+        </h2>
+      </div>
+      <div class="follow">
+        <h1>FOLLOW US</h1>
+        <img src="images\facebook .png" class="social" id="facebook_icon" />
+        <img src="images\instagram.png" class="social" id="instagram_icon" />
+        <img src="images\twitter.png" class="social" id="twitter_icon" />
+        <img src="images\youtuble.png" class="social" id="youtube_icon" />
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
