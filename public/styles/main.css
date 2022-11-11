@@ -295,6 +295,7 @@ form .residence{
   margin-top: 20px;
   display: none;
 }
+
 .cart form{
   background-color: #FFE0E0;
   width: 550px;
@@ -337,6 +338,7 @@ form .residence{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 .cart-image{
   width: 15%;
@@ -408,4 +410,15 @@ hr{
 .total-amount{
   font-size: 20px;
   font-weight: 900;
+}
+#hero #checkout{
+  background-color: orangered;
+  color: #fff;
+  border-radius: 2px;
+  padding: 5px;
+  float: right;
+  width: 550px;
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
 }
