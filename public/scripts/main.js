@@ -106,3 +106,9 @@ function renderAllProducts(listId, AllProducts){
 
     listContainer.innerHTML = innerHTML;
 }
+const mobile=document.querySelector(".Payment-details")
+function displayMobile(){
+    if(document.getElementById("mobile").checked==true){
+    mobile.style.display="block";        
+    }
+}
