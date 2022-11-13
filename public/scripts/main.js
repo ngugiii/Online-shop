@@ -106,9 +106,24 @@ function renderAllProducts(listId, AllProducts){
 
     listContainer.innerHTML = innerHTML;
 }
-const mobile=document.querySelector(".Payment-details")
-function displayMobile(){
-    if(document.getElementById("mobile").checked==true){
-    mobile.style.display="block";        
+function payments(x){
+    if (x==0){
+        document.getElementById("credit-module").style.display="block";
     }
+    else if(x != 0){
+        document.getElementById("credit-module").style.display="none";
+    }
+    if (x==1){
+        document.getElementById("debit-module").style.display="block";
+    }
+    else if(x != 1){
+        document.getElementById("debit-module").style.display="none";
+    }
+    if (x==2){
+        document.getElementById("mobile-module").style.display="block";
+    }
+    else if(x != 2){
+        document.getElementById("mobile-module").style.display="none";
+    }
+    return;
 }

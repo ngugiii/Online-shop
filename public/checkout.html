@@ -39,15 +39,14 @@
             </div>
                 <div class="payment">
                 <h1>payment</h1>
-                <div><input type="radio" name="payment" id="credit" value="credit card"><label for="credit">Credit card</label></div>
-                <div><input type="radio" name="payment" id="debit" value="debit card"><label for="debit">Debit card</label></div>
-               <div><input type="radio" name="payment" id="mobile" value="Mobile payment"><label for="mobile">Mobile Payment</label></div>
-                <div class="Payment-details">
-                    <div class="mobile-module">
+                <div><input type="radio" name="payment" id="credit" value="credit card" onclick="payments(0)"><label for="credit">Credit card</label></div>
+                <div><input type="radio" name="payment" id="debit" value="debit card"  onclick="payments(1)"><label for="debit">Debit card</label></div>
+               <div><input type="radio" name="payment" id="mobile" value="Mobile payment" onclick="payments(2)"><label for="mobile">Mobile Payment</label></div>
+                    <div class="mobile-module" id="mobile-module">
                         <label for="mobile">Phone Number</label>
                 <br><input type="text" name="" id="mobile" placeholder="0712345678">
                     </div>
-                    <div class="credit-module">
+                    <div class="credit-module" id="credit-module">
                         <label for="cardNo">Card Number</label>
                 <br><input type="text" name="" id="cardNo" placeholder="xxxx xxxxxxx xxxxx"><br>
                 <label for="exp">Expiration Date</label>
@@ -57,7 +56,7 @@
                 <label for="postal">Postal Code</label>
                 <br><input type="text" name="" id="postal"><br>
                     </div>
-                    <div class="debit-module">
+                    <div class="debit-module" id="debit-module">
                         <label for="cardNo">Card Number</label>
                 <br><input type="text" name="" id="cardNo" placeholder="xxxx xxxxxxx xxxxx"><br>
                 <label for="exp">Expiration Date</label>
@@ -67,7 +66,6 @@
                 <label for="postal">Postal Code</label>
                 <br><input type="text" name="" id="postal"><br>
                     </div>
-                </div>
             </div>
                 </form>
             </div>
@@ -148,7 +146,7 @@
                                         <div class="subtotal">
                                             Total
                                         </div>
-                                    <div class="total-amount">ksh 13200</div>
+                                    <div class="total-amount">ksh 23200</div>
                                 </div>
                             </div>
                         </div>             
