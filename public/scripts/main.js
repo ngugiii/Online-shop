@@ -62,9 +62,9 @@ function renderfeaturedProducts(listId, featuredProducts){
         <img src="${product.picture}">
         <div>${product.name}</div>
         <h4> Ksh ${product.price}</h4>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} class="addItem">+</button>
-        <span data-product-price= ${product.price} data-product-name= ${product.name} class="count">1</span>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} class="removeItem">-</button>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">1</span>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="removeItem">-</button>
         </li>
         `
         innerHTML+=listItem;
@@ -90,9 +90,9 @@ function renderlatestProducts(listId, latestProducts){
         <img src="${product.picture}">
         <div>${product.name}</div>
         <h4> Ksh ${product.price}</h4>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} class="addItem">+</button>
-        <span data-product-price= ${product.price} data-product-name= ${product.name} class="count">1</span>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} class="removeItem">-</button>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">1</span>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="removeItem">-</button>
         </li>
         `
         innerHTML+=listItem;
@@ -119,9 +119,9 @@ function renderAllProducts(listId, AllProducts){
         <img src="${product.picture}">
         <div>${product.name}</div>
         <h4> Ksh ${product.price}</h4>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} class="addItem">+</button>
-        <span data-product-price= ${product.price} data-product-name= ${product.name} class="count">1</span>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} class="removeItem">-</button>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">1</span>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="removeItem">-</button>
         </li>
         `
         innerHTML+=listItem;
@@ -138,33 +138,33 @@ function addRemove(){
         const button=event.target;
         console.log("addItem",event);
 
-        const name=button.dataset.productName;
+        const id=button.dataset.productId;
         const price=parseFloat(button.dataset.productPrice);
 
-        var stored=localStorage.getItem(name);
+        var stored=localStorage.getItem(id);
 
         if(stored){
             stored = JSON.parse(stored);
-            localStorage.setItem(name,JSON.stringify({count: stored.count + 1, price}));
+            localStorage.setItem(id,JSON.stringify({count: stored.count + 1, price}));
         }
         else{
-            localStorage.setItem(name,JSON.stringify({count: 1, price}));
+            localStorage.setItem(id,JSON.stringify({count: 1, price}));
         }
     }
     const removeItemCallBack = function (event) {
         const button=event.target;
         console.log("removeItem",event);
-        const name=button.dataset.productName;
+        const id=button.dataset.productId;
         const price=parseFloat(button.dataset.productPrice);
 
-        var stored=localStorage.getItem(name);
+        var stored=localStorage.getItem(id);
 
         if(stored){
             stored = JSON.parse(stored);
-            localStorage.setItem(name,JSON.stringify({count: stored.count -1, price}));
+            localStorage.setItem(id,JSON.stringify({count: stored.count -1, price}));
         }
         else{
-            localStorage.setItem(name,JSON.stringify({count: 1, price}));
+            localStorage.setItem(id,JSON.stringify({count: 1, price}));
         }
 }
 
