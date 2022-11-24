@@ -57,54 +57,131 @@ function renderfeaturedProducts(listId, featuredProducts){
     for (var index=0; index < featuredProducts.length; index++){
         const product = featuredProducts[index];
 
-        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><h4> Ksh "+product.price +"<h4></li>";
+        const listItem = 
+        `<li>
+        <img src="${product.picture}">
+        <div>${product.name}</div>
+        <h4> Ksh ${product.price}</h4>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} class="addItem">+</button>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} class="count">1</span>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} class="removeItem">-</button>
+        </li>
+        `
         innerHTML+=listItem;
     }
-
-    console.log(innerHTML);
-
     listContainer.innerHTML = innerHTML;
+    addRemove();
+
+    
 }
 
 function renderlatestProducts(listId, latestProducts){
 
     const listContainer=document.getElementById(listId);
 
-    console.log(listContainer);
 
     var innerHTML= "";
 
     for (var index=0; index < latestProducts.length; index++){
         const product = latestProducts[index];
 
-        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><h4> Ksh "+product.price +"<h4></li>";
+        const listItem = 
+        `<li>
+        <img src="${product.picture}">
+        <div>${product.name}</div>
+        <h4> Ksh ${product.price}</h4>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} class="addItem">+</button>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} class="count">1</span>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} class="removeItem">-</button>
+        </li>
+        `
         innerHTML+=listItem;
     }
 
-    console.log(innerHTML);
 
     listContainer.innerHTML = innerHTML;
+    addRemove();
+
 }
 
 function renderAllProducts(listId, AllProducts){
 
     const listContainer=document.getElementById(listId);
 
-    console.log(listContainer);
 
     var innerHTML= "";
 
     for (var index=0; index < AllProducts.length; index++){
         const product = AllProducts[index];
 
-        const listItem = "<li><img src=" + product.picture + "><div>" + product.name + "<div><h4> Ksh "+product.price +"<h4></li>";
+        const listItem = 
+        `<li>
+        <img src="${product.picture}">
+        <div>${product.name}</div>
+        <h4> Ksh ${product.price}</h4>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} class="addItem">+</button>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} class="count">1</span>
+        <button data-product-price= ${product.price} data-product-name= ${product.name} class="removeItem">-</button>
+        </li>
+        `
         innerHTML+=listItem;
 
     }
 
-    console.log(innerHTML);
 
     listContainer.innerHTML = innerHTML;
+    addRemove();
+
+}
+function addRemove(){
+    const addItemCallBack = function (event) {
+        const button=event.target;
+        console.log("addItem",event);
+
+        const name=button.dataset.productName;
+        const price=parseFloat(button.dataset.productPrice);
+
+        var stored=localStorage.getItem(name);
+
+        if(stored){
+            stored = JSON.parse(stored);
+            localStorage.setItem(name,JSON.stringify({count: stored.count + 1, price}));
+        }
+        else{
+            localStorage.setItem(name,JSON.stringify({count: 1, price}));
+        }
+    }
+    const removeItemCallBack = function (event) {
+        const button=event.target;
+        console.log("removeItem",event);
+        const name=button.dataset.productName;
+        const price=parseFloat(button.dataset.productPrice);
+
+        var stored=localStorage.getItem(name);
+
+        if(stored){
+            stored = JSON.parse(stored);
+            localStorage.setItem(name,JSON.stringify({count: stored.count -1, price}));
+        }
+        else{
+            localStorage.setItem(name,JSON.stringify({count: 1, price}));
+        }
+}
+
+var addItemButtons = document.getElementsByClassName("addItem");
+var removeItemButtons = document.getElementsByClassName("removeItem");
+
+addItemButtons = Array.from(addItemButtons);
+removeItemButtons = Array.from(removeItemButtons);
+
+addItemButtons.forEach(function(button){
+    button.addEventListener("click",addItemCallBack);
+})
+removeItemButtons.forEach(function(button){
+    button.addEventListener("click",removeItemCallBack);
+})
+// var count=localStorage.getItem("count");
+// document.getElementsByClassName("count").innerHTML=count;
 }
 function payments(x){
     if (x==0){

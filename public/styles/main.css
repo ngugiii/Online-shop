@@ -178,17 +178,43 @@ h4 {
   color: orangered;
   font-size: 15px;
 }
+.addItem{
+  background-color: rgb(56, 55, 55);
+  color: white;
+  border-radius: 2px;
+  padding: 4px;
+  cursor: pointer;
+  border: none;
+}
+.removeItem{
+  background-color: rgb(56, 55, 55);
+  color: white;
+  border-radius: 2px;
+  padding: 4px;
+  cursor: pointer;
+  border: none;
+
+}
+.count{
+  font-size: 18px;
+  background-color: rgb(56, 55, 55);
+  border-radius: 50%;
+  padding: 2px;
+  color: #fff;
+}
 .checkoutPage{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 0 100px;
 }
 .billing form {
   background-color: #ffe0e0;
   padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 696px;
+  border-radius: 15px;
 }
 .billing input[type="text"] {
   width: 100%;
@@ -196,6 +222,8 @@ h4 {
   margin: 9px 0;
   box-sizing: border-box;
   display: flex;
+  border: 1px solid gray;
+  border-radius: 6px;
 }
 .buyer-inputDetails label {
   font-weight: 600;
@@ -209,6 +237,7 @@ h4 {
   padding: 5px;
   display: none;
   font-weight: 600;
+  border-radius: 4px;
 
 }
 .debit-module {
@@ -219,6 +248,8 @@ h4 {
   padding: 7px;
   display: none;
   font-weight: 600;
+  border-radius: 4px;
+
 
 }
 .credit-module {
@@ -229,6 +260,8 @@ h4 {
   padding: 7px;
   display: none;
   font-weight: 600;
+  border-radius: 4px;
+
 
 }
 h7{
@@ -239,6 +272,9 @@ section#cart{
   background-color: #ffe0e0;
   width: 550px;
   height: 500px;
+  border-radius: 15px;
+  margin-top: 20px;
+
 }
 #cart .productName {
   width: 275px;
@@ -293,7 +329,7 @@ section#cart{
   height: 50px;
   width: 50px;
 }
-.counter {
+/* .counter {
   width: 15%;
   display: flex;
   justify-content: space-between;
@@ -311,10 +347,10 @@ section#cart{
   font-weight: 900;
   cursor: pointer;
 }
-.count {
+/* .count {
   font-size: 15px;
   font-weight: 900;
-}
+} */ */
 .prices {
   height: 100%;
   text-align: right;
@@ -322,6 +358,9 @@ section#cart{
 .amount {
   font-size: 20px;
   font-weight: 800;
+  border: 1px solid grey;
+  padding: 5px;
+
 }
 hr {
   float: right;
@@ -342,21 +381,24 @@ hr {
   font-size: 25px;
   font-weight: 700;
   width: 50%;
+
 }
 .total-amount {
   font-size: 20px;
   font-weight: 900;
+
 }
 section#cart #checkout {
   background-color: orangered;
   color: #fff;
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 5px;
-  float: right;
-  width: 100%;
-  margin-top: 10px;
-  align-items: center;
+  margin-top: 30px;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  width: 100%;
+
 }
 @media only screen and (max-width: 700px) {
   header {
@@ -448,6 +490,7 @@ section#cart #checkout {
     background-color: #ffe0e0;
     padding: 5px;
     width: 100%;
+    margin-top: 15px;
     margin-bottom: 10px;
   }
   section#cart{
@@ -499,6 +542,18 @@ section#cart #checkout {
   .count {
     font-size: 13px;
     font-weight: 900;
+  }
+  section#cart #checkout {
+    background-color: orangered;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  
   }
 }
 @media screen and (min-width: 701px) and (max-width:1450px){
