@@ -19,26 +19,58 @@ html {
   overflow: scroll;
 }
 header {
-  background-color: #fff3f3;
   height: 80px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 0;
+  z-index: 111;
+  transition: all .5s;
+  background-color: #fff3f3;
 }
 main {
   height: 100%;
 }
-a {
+nav{
+  height: 7.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-list li{
+  list-style: none;
+  margin: 5px;
+}
+li a{
+  color: black;
+  font-size: 18px;
   text-decoration: none;
-  margin-right: 5px;
 }
-a:link {
-  color: inherit;
+.active{
+  position: relative;
 }
-a:visited {
-  color: inherit;
+.active > *{
+  color: orangered;
 }
 
+.active::before{
+  position: absolute;
+  content: "";
+  left:0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: orangered;
+}
 section#hero {
   height: 700px;
   display: flex;
@@ -122,10 +154,15 @@ footer {
 .social {
   height: 35px;
   width: 35px;
+  cursor: pointer;
+}
+.social:hover{
+  height: 35px;
+  width: 35px;
 }
 
 .featuredProducts {
-  padding-top: 0;
+  padding-top: 90px;
 }
 ul#featuredProducts {
   list-style: none;
@@ -134,11 +171,18 @@ ul#featuredProducts {
   flex-wrap: wrap;
   justify-content: center;
   margin: 30px;
+  cursor: pointer;
 }
 img {
   height: 150px;
   width: 200px;
   margin: 10px;
+  transition: all .3s;
+}
+img:hover{
+  height: 160px;
+  width: 220px;
+
 }
 .featuredProducts h1 {
   font-size: 30px;
@@ -167,6 +211,37 @@ ul#AllProducts {
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px;
+  animation: slide ease .8s;
+}
+.top{
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background-color: transparent;
+  padding: 15px;
+  border: 1px solid orangered;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 111;
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: all .3s;
+
+}
+
+.show-btn{
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes slide{
+  0% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+    
+  }
 }
 .AllProducts h1 {
   font-size: 30px;
@@ -207,6 +282,7 @@ h4 {
   justify-content: space-between;
   width: 100%;
   padding: 0 100px;
+  padding-top: 100px;
 }
 .billing form {
   background-color: #ffe0e0;
@@ -359,6 +435,7 @@ section#cart{
   font-size: 20px;
   font-weight: 800;
   border: 1px solid grey;
+  border-radius: 7px;
   padding: 5px;
 
 }
@@ -484,6 +561,7 @@ section#cart #checkout {
   }
   .checkoutPage{
     padding: 0 20px;
+    padding-top: 100px;
     display: block;
   }
   .billing form {
@@ -620,6 +698,7 @@ section#cart #checkout {
   .checkoutPage{
     padding: 0 20px;
     display: block;
+    padding-top: 100px;
   }
   .billing form {
     background-color: #ffe0e0;

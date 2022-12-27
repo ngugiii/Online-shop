@@ -1,3 +1,52 @@
+//fixed navigation bar
+window.addEventListener("scroll",()=>{
+    const header=document.querySelector("header");
+    header.classList.toggle("header",window.scrollY>0)
+  });
+
+  //Active menu switch bar
+const navList=document.querySelector(".nav-list");
+
+navList.addEventListener("click",(e)=>{
+  const navLink=e.target.parentElement;
+  if(navLink.classList.contains("link")){
+    navList.querySelector(".active").classList.remove("active");
+    navLink.classList.add("active");
+  }
+  return false;
+});
+
+//scroll to top
+
+const scrollBtn=document.querySelector(".top");
+const rootEl=document.documentElement;
+
+document.addEventListener("scroll",showButton);
+scrollBtn.addEventListener("click",scrollToTop);
+
+function showButton(){
+  const scrollTotal=rootEl.scrollHeight - rootEl.clientHeight;
+
+  if(rootEl.scrollTop/scrollTotal > 0.3){
+    scrollBtn.classList.add("show-btn");
+  }
+  else{
+    scrollBtn.classList.remove("show-btn");
+
+  }
+}
+
+function scrollToTop(){
+  rootEl.scrollTo({
+    top: 0,
+    behavior:"smooth"
+  })
+}
+
+const CHECKOUT_ITEMS_LIST_KEY = "CHECKOUT_ITEMS_LIST";
+const CHECKOUT_ITEMS_DATA_KEY = "CHECKOUT_ITEMS_DATA";
+
+
 async function loadfeaturedProducts(featuredProductsCallback) {
     var data = await fetch("/public/data/featuredProducts.json",{headers: { 'content-type': 'application/json'}})
     var json = await data.json();
@@ -63,14 +112,13 @@ function renderfeaturedProducts(listId, featuredProducts){
         <div>${product.name}</div>
         <h4> Ksh ${product.price}</h4>
         <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
-        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">1</span>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">0</span>
         <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="removeItem">-</button>
         </li>
         `
         innerHTML+=listItem;
     }
     listContainer.innerHTML = innerHTML;
-    addRemove();
 
     
 }
@@ -91,7 +139,7 @@ function renderlatestProducts(listId, latestProducts){
         <div>${product.name}</div>
         <h4> Ksh ${product.price}</h4>
         <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
-        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">1</span>
+        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">0</span>
         <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="removeItem">-</button>
         </li>
         `
@@ -100,7 +148,6 @@ function renderlatestProducts(listId, latestProducts){
 
 
     listContainer.innerHTML = innerHTML;
-    addRemove();
 
 }
 
@@ -116,58 +163,106 @@ function renderAllProducts(listId, AllProducts){
 
         const listItem = 
         `<li>
-        <img src="${product.picture}">
-        <div>${product.name}</div>
-        <h4> Ksh ${product.price}</h4>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
-        <span data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="count">1</span>
-        <button data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="removeItem">-</button>
+        <img src="${product.details.picture}">
+        <div>${product.details.name}</div>
+        <h4> Ksh ${product.details.price}</h4>
+        <button data-product-price= ${product.details.price} data-product-name= ${product.details.name} data-product-id= ${product.id} class="addItem">+</button>
+        <span data-product-price= ${product.details.price} data-product-name= ${product.details.name} data-product-id= ${product.id} class="count">0</span>
+        <button data-product-price= ${product.details.price} data-product-name= ${product.details.name} data-product-id= ${product.id} class="removeItem">-</button>
         </li>
         `
         innerHTML+=listItem;
 
     }
 
-
     listContainer.innerHTML = innerHTML;
-    addRemove();
-
-}
-function addRemove(){
+    
+    
     const addItemCallBack = function (event) {
-        const button=event.target;
-        console.log("addItem",event);
-
-        const id=button.dataset.productId;
-        const price=parseFloat(button.dataset.productPrice);
-
-        var stored=localStorage.getItem(id);
-
-        if(stored){
-            stored = JSON.parse(stored);
-            localStorage.setItem(id,JSON.stringify({count: stored.count + 1, price}));
+        // Get data for the product being added
+        const button = event.target;
+        const id = button.dataset.productId;
+        const price = parseFloat(button.dataset.productPrice);
+        const name = button.dataset.productName;
+      
+        // Retrieve items from local storage
+        let itemsStoredList = localStorage.getItem(CHECKOUT_ITEMS_LIST_KEY);
+        let checkoutItemsData = localStorage.getItem(CHECKOUT_ITEMS_DATA_KEY);
+      
+        // Parse the stored data from local storage
+        itemsStoredList = itemsStoredList ? JSON.parse(itemsStoredList) : [];
+        checkoutItemsData = checkoutItemsData ? JSON.parse(checkoutItemsData) : {};
+      
+        // Check if the product being added is already in the list
+        if (itemsStoredList.includes(id)) {
+          // Update count for existing product
+          checkoutItemsData[id].count += 1;
+        } else {
+          // Add new product
+          itemsStoredList.push(id);
+          checkoutItemsData[id] = { count: 1, price, name };
         }
-        else{
-            localStorage.setItem(id,JSON.stringify({count: 1, price}));
-        }
-    }
-    const removeItemCallBack = function (event) {
-        const button=event.target;
-        console.log("removeItem",event);
-        const id=button.dataset.productId;
-        const price=parseFloat(button.dataset.productPrice);
+      
+        // Store the updated data in local storage
+        localStorage.setItem(CHECKOUT_ITEMS_LIST_KEY, JSON.stringify(itemsStoredList));
+        localStorage.setItem(CHECKOUT_ITEMS_DATA_KEY, JSON.stringify(checkoutItemsData));
 
-        var stored=localStorage.getItem(id);
-
-        if(stored){
-            stored = JSON.parse(stored);
-            localStorage.setItem(id,JSON.stringify({count: stored.count -1, price}));
+        
+        const cartElement = document.querySelector(".cart");
+        cartElement.innerHTML = "";
+        for (const id of itemsStoredList) {
+          cartElement.innerHTML += `
+            <div>Product: ${checkoutItemsData[id].name}</div>
+            <div>Count: ${checkoutItemsData[id].count}</div>
+          `;
         }
-        else{
-            localStorage.setItem(id,JSON.stringify({count: 1, price}));
-        }
+        const countElement = document.querySelector(".count");
+        countElement.innerHTML = itemsStoredList.length;
 }
 
+const removeItemCallBack = function (event) {
+    // Get data for the product being removed
+    const button = event.target;
+    const id = button.dataset.productId;
+  
+    // Retrieve items from local storage
+    let itemsStoredList = localStorage.getItem(CHECKOUT_ITEMS_LIST_KEY);
+    let checkoutItemsData = localStorage.getItem(CHECKOUT_ITEMS_DATA_KEY);
+  
+    // Parse the stored data from local storage
+    itemsStoredList = itemsStoredList ? JSON.parse(itemsStoredList) : [];
+    checkoutItemsData = checkoutItemsData ? JSON.parse(checkoutItemsData) : {};
+  
+    // Check if the product being removed is in the list
+    if (itemsStoredList.includes(id)) {
+      // Decrement count for existing product
+      checkoutItemsData[id].count -= 1;
+  
+      // If count is 0, remove the product from the list
+      if (checkoutItemsData[id].count === 0) {
+        const index = itemsStoredList.indexOf(id);
+        itemsStoredList.splice(index, 1);
+        delete checkoutItemsData[id];
+      }
+    }
+  
+    // Store the updated data in local storage
+    localStorage.setItem(CHECKOUT_ITEMS_LIST_KEY, JSON.stringify(itemsStoredList));
+    localStorage.setItem(CHECKOUT_ITEMS_DATA_KEY, JSON.stringify(checkoutItemsData));
+  
+    // Update the cart element and count element on the page to reflect the changes
+    const cartElement = document.querySelector(".cart");
+    cartElement.innerHTML = "";
+    for (const id of itemsStoredList) {
+      cartElement.innerHTML += `
+        <div>Product: ${checkoutItemsData[id].name}</div>
+        <div>Count: ${checkoutItemsData[id].count}</div>
+      `;
+    }
+    const countElement = document.querySelector(".count");
+    countElement.innerHTML = itemsStoredList.length;
+  }
+  
 var addItemButtons = document.getElementsByClassName("addItem");
 var removeItemButtons = document.getElementsByClassName("removeItem");
 
@@ -180,8 +275,6 @@ addItemButtons.forEach(function(button){
 removeItemButtons.forEach(function(button){
     button.addEventListener("click",removeItemCallBack);
 })
-// var count=localStorage.getItem("count");
-// document.getElementsByClassName("count").innerHTML=count;
 }
 function payments(x){
     if (x==0){
