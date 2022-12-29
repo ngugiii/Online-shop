@@ -3,26 +3,26 @@
     {
         "name": "Black HRX Shoes",
         "picture": "images/hrx-shoes.jpg",
-        "price": 4500
-
+        "price": 4500,
+        "id": "product010"
     },
     {
         "name": "Puma shoes",
         "picture": "images/puma-shoes.jpg",
-        "price": 5000
-
+        "price": 5000,
+        "id": "product004"
     },
     {
         "name": "Black Sports Watch",
         "picture": "images/Sports-watch.jpg",
-        "price": 1700
-
+        "price": 1700,
+        "id": "product011"
     },
     {
         "name": "Black Fossil Watch",
         "picture": "images/Fossil-watch.jpg",
-        "price": 2200
-
+        "price": 2200,
+        "id": "product013"
     }
 ]
 
