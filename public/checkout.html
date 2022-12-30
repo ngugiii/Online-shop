@@ -10,7 +10,7 @@
     <header>
         <nav>
           <ul class="nav-list">
-          <li class="link active"><a href="index.html">Home</a></li>
+          <li class="link"><a href="index.html">Home</a></li>
           <li class="link"><a href="products.html">Products</a></li>
           <li class="link"><a href="checkout.html">Checkout</a></li>
           </ul>
@@ -41,6 +41,7 @@
             </div>
                 <div class="payment">
                 <h1>Payment <h7>(Choose Payment Option)</h7></h1>
+                <div><input type="radio" name="payment" id="COD" value="cod" onclick="payments(7)"><label for="COD">Cash On Delivery</label></div>
                 <div><input type="radio" name="payment" id="credit" value="credit card" onclick="payments(0)"><label for="credit">Credit card</label></div>
                 <div><input type="radio" name="payment" id="debit" value="debit card"  onclick="payments(1)"><label for="debit">Debit card</label></div>
                <div><input type="radio" name="payment" id="mobile" value="Mobile payment" onclick="payments(2)"><label for="mobile">Mobile Payment</label></div>
@@ -72,94 +73,17 @@
                 </form>
             </div>
         </section>
-        <section>
-            <div class="cart">
-                
-            </div>
+        <section id="cart">
+         <button id="removeAllButton">Remove All</button>
+
+            <table id="myTable">
+
+            </table>
+                <a href="checkouts.html" id="checkout">Continue To Checkout ---></a>
 
         </section>
-        <!-- <div id="product-name"></div>
-        <div id="product-id"></div>
-        <div id="product-count"></div> -->
-        <!-- <div class="checkout-item-count">
-            <span class="count">0</span> items in checkout
-          </div> -->
-          <!-- <table id="my-table">
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table> -->
 
-
-        <!-- <section id="cart">
-                    <div class="cart-header">
-                    <h1 class="heading">Your cart</h1>
-                    <h4 class="remove">Remove All</h4>
-                </div>
-                    <div class="cart-items">
-                        <div class="cart-image">
-                            <img src="images/nike.jpg">
-                            </div>
-                            <div class="product-details">
-                                <h1 class="product-name">Adidas Sports Shoes</h1>
-                            </div>
-                            <div class="prices">
-                                <div class="amount">ksh 7000</div>
-                            </div>
-                        </div>
-                        <div class="cart-items">
-                            <div class="cart-image">
-                                <img src="images/Fossil-watch.jpg">
-                                </div>
-                                <div class="product-details">
-                                    <h1 class="product-name">Black Fossil Watch</h1>
-                                </div>
-                                <div class="prices">
-                                    <div class="amount">ksh 6600</div>
-                                </div>
-                            </div>
-                            <div class="cart-items">
-                                <div class="cart-image">
-                                    <img src="images/adidas-hoodie.jpg">
-                                    </div>
-                                    <div class="product-details">
-                                        <h1 class="product-name"> Grey Adidas Hoodie</h1>
-                                    </div>
-                                    <div class="prices">
-                                        <div class="amount">ksh 2500</div>
-                                    </div>
-                                </div>
-                                <div class="cart-items">
-                                    <div class="cart-image">
-                                        <img src="images/puma-shoes.jpg">
-                                        </div>
-                                        <div class="product-details">
-                                            <h1 class="product-name">Grey Puma Shoes</h1>
-                                        </div>
-
-                                        <div class="prices">
-                                            <div class="amount">ksh 5000</div>
-                                        </div>  
-                                        </div>
-                                     <hr>
-                                     <div class="cart-items">
-                                    <div class="checkout">
-                                    <div class="total">
-                                        <div class="subtotal">
-                                            Total
-                                        </div>
-                                    <div class="total-amount">ksh 23200</div>
-                                </div>
-                            </div>
-                        </div>             
-                </div>
-                <a href="checkouts.html" id="checkout">Continue To Checkout</a>
-
-                </section> -->
+                </section>
     </main>
     <footer>
       <div class="download">
@@ -183,6 +107,8 @@
         <img src="images\youtuble.png" class="social" id="youtube_icon" />
       </div>
     </footer>
+
     <script src="scripts/main.js"></script>
+    <script src="scripts/checkout.js"></script>
   </body>
 </html>

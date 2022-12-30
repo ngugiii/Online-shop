@@ -2,78 +2,78 @@
     "AllProducts": [
     {
         "id": "product001",
-        "details":{"name": "Adidas Hoodie","picture":"images/adidas-hoodie.jpg","price":2500}
+        "details":{"name": "Adidas_Hoodie","picture":"images/adidas-hoodie.jpg","price":2500}
     },
     {
         "id": "product002",
-        "details":{"name": "Orange yeezy shoes","picture":"images/Orange-shoes.jpg","price":4700}
+        "details":{"name": "Orange_yeezy_shoes","picture":"images/Orange-shoes.jpg","price":4700}
     },
     {
         "id": "product003",
-        "details":{"name": "Smart Watch","picture":"images/exclusive.png","price":3500}
+        "details":{"name": "Smart_Watch","picture":"images/exclusive.png","price":3500}
     },
     {
         "id": "product004",
-        "details":{"name": "Puma shoes","picture":"images/puma-shoes.jpg","price":5000}
+        "details":{"name": "Puma_shoes","picture":"images/puma-shoes.jpg","price":5000}
 
 
 
     },
     {
         "id": "product005",
-        "details":{"name":  "HRX Socks","picture":"images/HRX-Socks.jpg","price":280}
+        "details":{"name":  "HRX_Socks","picture":"images/HRX-Socks.jpg","price":280}
 
     },
     {
         "id": "product006",
-        "details":{"name":"HRX Black sports shoes","picture":"images/sports-wear.jpg","price":2999}
+        "details":{"name":"HRX_Black_sports_shoes","picture":"images/sports-wear.jpg","price":2999}
 
 
 
     },
     {
         "id": "product007",
-        "details":{"name": "Black Track Pants","picture":"images/Black-trackpants.jpg","price":1200}
+        "details":{"name": "Black_Track_Pants","picture":"images/Black-trackpants.jpg","price":1200}
     },
     {
         "id": "product008",
-        "details":{"name": "Adidas Shoes","picture":"images/nike.jpg","price":3500}
+        "details":{"name": "Adidas_Shoes","picture":"images/nike.jpg","price":3500}
 
 
 
     },
     {
         "id": "product009",
-        "details":{"name": "Red Printed T-shirt","picture":"images/RedT-shirt.jpg","price":700}
+        "details":{"name": "Red_Printed_T-shirt","picture":"images/RedT-shirt.jpg","price":700}
 
 
 
     },
     {
         "id": "product010",
-        "details":{"name": "Black HRX Shoes","picture":"images/hrx-shoes.jpg","price":4500}
+        "details":{"name": "Black_HRX_Shoes","picture":"images/hrx-shoes.jpg","price":4500}
 
 
 
     },
     {
         "id": "product011",
-        "details":{"name": "Black Sports Watch","picture":"images/Sports-watch.jpg","price":1700}
+        "details":{"name": "Black_Sports_Watch","picture":"images/Sports-watch.jpg","price":1700}
 
     },
     {
         "id": "product012",
-        "details":{"name":"Black Printed T-shirt","picture": "images/BlackT-shirt.jpg","price":750}
+        "details":{"name":"Black_Printed_T-shirt","picture": "images/BlackT-shirt.jpg","price":750}
 
     },
     {
         "id": "product013",
-        "details":{"name": "Black Fossil Watch","picture":"images/Fossil-watch.jpg","price":2200}
+        "details":{"name": "Black_Fossil_Watch","picture":"images/Fossil-watch.jpg","price":2200}
 
     },
     {
         "id": "product014",
-        "details":{"name": "Grey Track Pants","picture":"images/Track-Pants.jpg","price":1300}
+        "details":{"name": "Grey_Track_Pants","picture":"images/Track-Pants.jpg","price":1300}
     }
 ]
 }
