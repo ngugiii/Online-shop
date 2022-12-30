@@ -2,25 +2,25 @@
     "latestProducts" : [
     {
         "name": "Black_HRX_Shoes",
-        "picture": "images/hrx-shoes.jpg",
+        "picture": "/public/images/hrx-shoes.jpg",
         "price": 4500,
         "id": "product010"
     },
     {
         "name": "Puma_shoes",
-        "picture": "images/puma-shoes.jpg",
+        "picture": "/public/images/puma-shoes.jpg",
         "price": 5000,
         "id": "product004"
     },
     {
         "name": "Black_Sports_Watch",
-        "picture": "images/Sports-watch.jpg",
+        "picture": "/public/images/Sports-watch.jpg",
         "price": 1700,
         "id": "product011"
     },
     {
         "name": "Black_Fossil_Watch",
-        "picture": "images/Fossil-watch.jpg",
+        "picture": "/public/images/Fossil-watch.jpg",
         "price": 2200,
         "id": "product013"
     }

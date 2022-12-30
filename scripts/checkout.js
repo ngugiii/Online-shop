@@ -11,12 +11,6 @@ const checkoutItemsData = localStorage.getItem(CHECKOUT_ITEMS_DATA_KEY);
 const items = itemsStoredList ? JSON.parse(itemsStoredList) : [];
 const itemsData = checkoutItemsData ? JSON.parse(checkoutItemsData) : {};
 
-console.log(checkoutItemsData);
-
-// Select the element in the checkout page where the items should be rendered
-const cartElement = document.querySelector(".cart");
-const tableHeader = document.querySelector(".carts");
-
 // Find a <table> element with id="myTable":
 var table = document.getElementById("myTable");
 

@@ -63,7 +63,7 @@ function renderfeaturedProducts(listId, featuredProducts){
 
         const listItem = 
         `<li>
-        <img src="${product.picture}" class="productsImages">
+        <img src= "${product.picture}" class="productsImages">
         <div>${product.name}</div>
         <h4> Ksh ${product.price}</h4>
         <button data-product-picture=${product.picture} data-product-price= ${product.price} data-product-name= ${product.name} data-product-id= ${product.id} class="addItem">+</button>
